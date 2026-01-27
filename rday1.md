@@ -1,4 +1,4 @@
-# Transaction structure: Deep Dive
+## 1.TRASACTION STRUCTURE: TYPE; TRANSFER
 Tool: Etherscan's "raw input" tab
 Activity: Tracing one token transfer and decoding its input data using Etherscan’s decoder.
 
@@ -34,4 +34,44 @@ Activity: Tracing one token transfer and decoding its input data using Etherscan
 
 ## Inference
 The sender called the token contract and executed the transfer function, which moved X tokens from the sender’s address to the receiver’s address. The transaction succeeded and emitted a Transfer event confirming the movement.
+
+
+
+
+
+
+
+
+
+## 2.TRASACTION STRUCTURE: TYPE; SWAP
+Tool: Etherscan's "raw input" tab
+Activity:
+
+## Transaction Overview
+- Transaction Hash:
+- Block Number:
+- Status:
+
+## Participants
+- Sender:
+- Receiver:
+- Token Contract:
+
+## Transaction Details
+- Function Called:
+- Input Parameters:
+  - To:
+  - Amount:
+
+## Logs Evidence
+- Event:
+- From:
+- To:
+- Value:
+
+## Gas Information
+- Gas Used:
+- Effective Gas Price:
+
+## What Happened (Plain Explanation)
 
