@@ -79,7 +79,7 @@ Activity: Tracing token swap on a certain DEX(Uniswap V2 Router)
 ## Gas Information
 - Gas Used: 132,644
 - Gas Max:  1,000,000
-- Effective Gas Price: 0.044837813 Gwei (0.000000000044837813 ETH)
+- Gas Price: 0.044837813 Gwei (0.000000000044837813 ETH)
 
 ## What Happened (Plain Explanation)
 The user sent 0.168344 ETH to the Uniswap V2 Router.
@@ -88,7 +88,7 @@ In return, the user received 186,941.437 PENGU tokens directly into their wallet
 No minimum output was enforced, meaning the user accepted any price, which exposes them to slippage risk.
 
 
-## TRANSACTION STRUCTURE: TYPE;APPROVE
+## 3.TRANSACTION STRUCTURE: TYPE;APPROVE
 Tool: Etherscan's "raw input" tab
 Activity: analyzing an approve transaction.
 
@@ -113,3 +113,12 @@ Activity: analyzing an approve transaction.
 - src(approval):  0x42BD26EEaEd54F455f2794b6497da970EcA4DAb3
 - guy(spender):   0xC13e21B648A5Ee794902342038FF3aDAB66BE987
 - value;wad(tokens): 5440065809464961657338
+
+## Gas Information
+-gas Price: 4.006361106 Gwei (0.000000004006361106 ETH)
+-Gas Used: 46,194
+-Gas Max:  46,576 
+
+## What Happened (Plain Explanation)
+The sender(src) called the approve function in the token contract(Sky: Dai Stablecoin),
+the receiver of the call and then the token contract gave permission to the spender(guy) over 5440.065809464961657338 tokens(wad;5440065809464961657338).
