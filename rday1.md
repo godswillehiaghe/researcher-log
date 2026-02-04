@@ -12,9 +12,8 @@ Activity: Tracing one token transfer and decoding its input data using Etherscan
 - Receiver:       0x08633E0cf3A77e308B9ce4a7eE1001f07Fda37A9
 - Token Contract: 0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48(Circle: USDC Token)
 
-## Execution
+## Transaction Details
 - Function:      transfer(address, uint256 value)
-- Raw Input(hex):0xa9059cbb00000000000000000000000008633e0cf3a77e308b9ce4a7ee1001f07fda37a900000000000000000000000000000000000000000000000000000000000000fa
 - Decoded Input(Input Parameters):
     - to:0x08633E0cf3A77e308B9ce4a7eE1001f07Fda37A9
     - amount:250
@@ -86,6 +85,31 @@ Activity: Tracing token swap on a certain DEX(Uniswap V2 Router)
 The user sent 0.168344 ETH to the Uniswap V2 Router.
 The router wrapped the ETH into WETH, routed it through the PENGU–WETH liquidity pool, and executed a swap.
 In return, the user received 186,941.437 PENGU tokens directly into their wallet.
-
 No minimum output was enforced, meaning the user accepted any price, which exposes them to slippage risk.
 
+
+## TRANSACTION STRUCTURE: TYPE;APPROVE
+Tool: Etherscan's "raw input" tab
+Activity: analyzing an approve transaction.
+
+
+## Transaction Overview
+- Transaction Hash: 0xdcb331bc7d22fb590112f55a269c6e1bb156ade5914d058f3c7166d5b3b40198
+- Block number: 24378282
+- Status: success
+
+## Participants
+- Sender(User): 0x42BD26EEaEd54F455f2794b6497da970EcA4DAb3
+- Receiver(contract receiving permisssion): 0x6B175474E89094C44Da98b954EedeAC495271d0F(Sky: Dai Stablecoin)
+
+## Transaction Details
+- Function:  approve(address usr, uint256 wad)
+- Input Parameters:
+     - spender(contract account being given permission): 0xC13e21B648A5Ee794902342038FF3aDAB66BE987
+     - amount: 5440065809464961657338(5440.065809464961657338 tokens)
+
+## Logs Evidence
+- Event: Approve
+- src(approval):  0x42BD26EEaEd54F455f2794b6497da970EcA4DAb3
+- guy(spender):   0xC13e21B648A5Ee794902342038FF3aDAB66BE987
+- value;wad(tokens): 5440065809464961657338
